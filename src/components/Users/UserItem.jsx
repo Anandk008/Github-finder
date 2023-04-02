@@ -23,7 +23,7 @@ function UserItem({user : { login , avatar_url }}) {
 }
 
 UserItem.propTypes = {
-    uesr: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
 }
 
 export default UserItem
