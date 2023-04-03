@@ -10,7 +10,7 @@ export const searchUsers = async (text) => {
   const params = new URLSearchParams({
     q: text,
   });
-  const responce = await github.get(`/search/users${params}`)
+  const responce = await github.get(`/search/users?${params}`)
   return responce.data.items
 };
 
