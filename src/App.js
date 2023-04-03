@@ -2,12 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/layought/NavBar";
 import Footer from "./components/layought/Footer";
-import NotFound from "./Pages/NotFound";
+import Alert from "./components/layought/Alert";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import { GithubProvider } from "./context/github/GithubContext";
+import User from "./Pages/User";
+import NotFound from "./Pages/NotFound";
 import { AlertProvider } from "./context/alert/AlertContext";
-import Alert from "./components/layought/Alert";
+import { GithubProvider } from "./context/github/GithubContext";
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/user/:login" element={<User /> } />
                 <Route path="/notfound" element={<NotFound />} />
-                <Route path='/*' element={<NotFound />} />
+                <Route element={<NotFound /> } />
               </Routes>
             </main>
             <Footer />

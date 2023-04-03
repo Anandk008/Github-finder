@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-card-image .card-image-full:before{
+    border: 0.5rem;
+    opacity: 0.45;
+}
+
 .loader {
   position: relative;
   width: 2.5em;
