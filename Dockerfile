@@ -1,4 +1,4 @@
-FROM npm:16
+FROM bayesimpact/react-base
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
